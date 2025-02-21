@@ -8,21 +8,21 @@ unsigned int populacao, pontos;
  char nome[50], nome2[50], cdc[50], cdc2[50];
 
  
- printf("Insira os dados da primeira carta\n");
+printf("Insira os dados da carta:\n");
 
-printf("Digite o codigo da carta\n");
+ printf("Digite o codigo da carta:\n");
 scanf("%s" , &cdc);
 
-printf("Digite o nome da cidade\n");
+printf("Digite o nome da cidade:\n");
 scanf("%s" , &nome);
 
-printf("Digite o numero da populacao\n");
+printf("Digite o numero da populacao:\n");
 scanf("%d" , &populacao);
 
-printf("Digite a area da cidade\n");
+printf("Digite a area da cidade:\n");
 scanf("%f" , &area);
 
-printf("Didite o numero de pontos turisticos\n");
+printf("Didite o numero de pontos turisticos:\n");
 scanf("%d" , &pontos);
 
 printf("DIgite o pib total:\n");
@@ -31,20 +31,20 @@ scanf("%f", &pib);
 //Agora vamos inserir os dados da segunda carta
 //Agora as variaveis tem o mesmo nome + o numero 2
 //Exeto pela variavel "pib" ela sea adicionada 02 "pib02" e o pib per capita "pib3"
-printf("Agora insira os dados da segunda carta\n");
-printf("Digite o codigo da cidade\n");
+printf("Agora insira os dados da carta 2:\n");
+printf("Digite o codigo da cidade:\n");
 scanf("%s" , &cdc2);
 
-printf("Digite o nome da cidade\n");
+printf("Digite o nome da cidade:\n");
 scanf("%s" , &nome2);
 
-printf("Digite o numero da populacao\n");
+printf("Digite o numero da populacao:\n");
 scanf("%d" , &populacao2);
 
-printf("Digite a area da cidade\n");
+printf("Digite a area da cidade:\n");
 scanf("%f" , &area2);
 
-printf("Didite o numero de pontos turisticos\n");
+printf("Didite o numero de pontos turisticos:\n");
 scanf("%d" , &pontos2);
 
 printf("DIgite o pib total:\n");
@@ -56,6 +56,7 @@ pib2 = pib / populacao;
 pib3 = pib02 / pontos2;
 
 printf("Comparacoes de cartas\n");
+printf("\n");
 
 printf("Carta 1 - Cidade: %s, Codigo: %s, Populacao: %d\n", nome, cdc, populacao);
 printf("Carta 2 - Cidade: %s, Codigo: %s, Populacao: %d\n", nome2, cdc2, populacao2);
@@ -79,7 +80,7 @@ if (pontos > pontos2){
     printf("Resuntado: Carta 2 venceu!\n");
 }
 printf("Carta 1 - Cidade: %s, Codigo: %s, Pib: %f\n", nome, cdc, pib);
-printf("Carta 2 - Cidade: %s, Codigo: %s, Pib: turisticos: %f\n", nome2, cdc2, pib02);
+printf("Carta 2 - Cidade: %s, Codigo: %s, Pib: %f\n", nome2, cdc2, pib02);
 if (pib > pib02){
     printf("Resultado: Carta 1 venceu!\n");
 }else{
