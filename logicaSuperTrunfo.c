@@ -1,107 +1,132 @@
 #include <stdio.h>
-int main(){
 
-unsigned int populacao, pontos;
- unsigned int populacao2, pontos2;
- double area, pib, densidade, pib2;
- double area2, pib02, densidade2, pib3;
- char nome[50], nome2[50], cdc[50], cdc2[50];
+// Desafio Super Trunfo - Países
+// Tema 1 - Cadastro das Cartas
+// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
+// Siga os comentários para implementar cada parte do desafio.
+//Teste larissa
 
+//Densidade Populacional: População dividida pela área da cidade.
+//PIB per capita: PIB total dividido pela população.
+
+int main() {
+
+ unsigned long int  populacao1, pontosT1;
+ unsigned long int  populacao2, pontosT2;
+ float area1, pib1, densidade1, pib2;
+ float area2, pib01, densidade2, pib02;
+ double super, super2;
+ char cidade1[50], cidade2[50], codigo1[50], codigo2[50], estado1[50], estado2[50];
  
-printf("Insira os dados da carta:\n");
+ printf("Insira os dados da primeira carta\n");
+printf("Digite o codigo da carta:");
+scanf("%s" , &codigo1);
 
- printf("Digite o codigo da carta:\n");
-scanf("%s" , &cdc);
+printf("Digite o Estado:");
+scanf("%s", &estado1);
 
-printf("Digite o nome da cidade:\n");
-scanf("%s" , &nome);
+printf("Digite o nome da cidade:");
+scanf("%s" , &cidade1);
 
-printf("Digite o numero da populacao:\n");
-scanf("%d" , &populacao);
+printf("Digite o numero da populacao:");
+scanf("%d" , &populacao1);
 
-printf("Digite a area da cidade:\n");
-scanf("%f" , &area);
+printf("Digite a area da cidade:");
+scanf("%f" , &area1);
 
-printf("Didite o numero de pontos turisticos:\n");
-scanf("%d" , &pontos);
+printf("Didite o numero de pontos turisticos:");
+scanf("%d" , &pontosT1);
 
-printf("DIgite o pib total:\n");
-scanf("%f", &pib);
+printf("DIgite o pib total:");
+scanf("%f", &pib1);
+printf("\n");
 
 //Agora vamos inserir os dados da segunda carta
 //Agora as variaveis tem o mesmo nome + o numero 2
-//Exeto pela variavel "pib" ela sea adicionada 02 "pib02" e o pib per capita "pib3"
-printf("Agora insira os dados da carta 2:\n");
-printf("Digite o codigo da cidade:\n");
-scanf("%s" , &cdc2);
+//Exeto pela variavel "pib" ela sea adicionada 01 "pib01" e o pib per capita "pib02"
 
-printf("Digite o nome da cidade:\n");
-scanf("%s" , &nome2);
+printf("Agora insira os dados da segunda carta\n");
+printf("Digite o codigo da carta:");
+scanf("%s" , &codigo2);
 
-printf("Digite o numero da populacao:\n");
+printf("Digite o Estado:");
+scanf("%s", &estado2);
+
+printf("Digite o nome da cidade:");
+scanf("%s" , &cidade2);
+
+printf("Digite o numero da populacao:");
 scanf("%d" , &populacao2);
 
-printf("Digite a area da cidade:\n");
+printf("Digite a area da cidade:");
 scanf("%f" , &area2);
 
-printf("Didite o numero de pontos turisticos:\n");
-scanf("%d" , &pontos2);
+printf("Didite o numero de pontos turisticos:");
+scanf("%d" , &pontosT2);
 
-printf("DIgite o pib total:\n");
+printf("DIgite o PIB total:");
 scanf("%f", &pib2);
 
-densidade = populacao / area;
+
+densidade1 = populacao1 / area1;
 densidade2 = populacao2 / area2;
-pib2 = pib / populacao;
-pib3 = pib02 / pontos2;
+pib2 = pib1 / populacao1;
+pib02 = pib02 / pontosT2;
+super = populacao1 + area1 + pontosT1 + pib1;
+super2 = populacao2 + area2 + pontosT2 + pib01;
 
-printf("Comparacoes de cartas\n");
 printf("\n");
+printf("Hora do duelo\n");
 
-printf("Carta 1 - Cidade: %s, Codigo: %s, Populacao: %d\n", nome, cdc, populacao);
-printf("Carta 2 - Cidade: %s, Codigo: %s, Populacao: %d\n", nome2, cdc2, populacao2);
-if (populacao > populacao2){
-    printf("Resultado: Carta 1 venceu!\n");
+printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Populacao: %d\n", codigo1, estado1, cidade1, populacao1);
+printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Populacao: %d\n", codigo2, estado2, cidade2, populacao2);
+if(populacao1 > populacao2){
+    printf("Carta 1 Venceu!\n");
 }else{
-    printf("Resuntado: Carta 2 venceu!\n");
+    printf("Carta 2 Venceu!\n");
 }
-printf("Carta 1 - Cidade: %s, Codigo: %s, Area: %f\n", nome, cdc, area);
-printf("Carta 2 - Cidade: %s, Codigo: %s, Area: %f\n", nome2, cdc2, area2);
-if (area > area2){
-    printf("Resultado: Carta 1 venceu!\n");
+printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Area: %f\n", codigo1, estado1, cidade1, area1);
+printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Area: %f\n", codigo2, estado2, cidade2, area2);
+if(area1 > area2){
+    printf("Carta 1 Venceu!\n");
 }else{
-    printf("Resuntado: Carta 2 venceu!\n");
+    printf("Carta 2 Venceu!\n");
 }
-printf("Carta 1 - Cidade: %s, Codigo: %s, Pontos turisticos: %d\n", nome, cdc, pontos);
-printf("Carta 2 - Cidade: %s, Codigo: %s, Pontos turisticos: %d\n", nome2, cdc2, pontos2);
-if (pontos > pontos2){
-    printf("Resultado: Carta 1 venceu!\n");
+printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Pontos Turisticos: %d\n", codigo1, estado1, cidade1, pontosT1);
+printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Pontos Turisticos: %d\n", codigo2, estado2, cidade2, pontosT2);
+if(pontosT1 > pontosT2){
+    printf("Carta 1 Venceu!\n");
 }else{
-    printf("Resuntado: Carta 2 venceu!\n");
+    printf("Carta 2 Venceu!\n");
 }
-printf("Carta 1 - Cidade: %s, Codigo: %s, Pib: %f\n", nome, cdc, pib);
-printf("Carta 2 - Cidade: %s, Codigo: %s, Pib: %f\n", nome2, cdc2, pib02);
-if (pib > pib02){
-    printf("Resultado: Carta 1 venceu!\n");
+printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Pib: %f\n", codigo1, estado1, cidade1, pib1);
+printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - pib: %f\n", codigo2, estado2, cidade2, pib01);
+if(pib1 > pib01){
+    printf("Carta 1 Venceu!\n");      
 }else{
-    printf("Resuntado: Carta 2 venceu!\n");
+    printf("Carta 2 Venceu!\n");
 }
-printf("Carta 1 - Cidade: %s, Codigo: %s, Densidade: %f\n", nome, cdc, densidade);
-printf("Carta 2 - Cidade: %s, Codigo: %s, Densidade: %f\n", nome2, cdc2, densidade2);
-if (densidade < densidade2){
-    printf("Resultado: Carta 1 venceu!\n");
+printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Densidade: %f\n", codigo1, estado1, cidade1, densidade1);
+printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Densidade: %f\n", codigo2, estado2, cidade2, densidade2);
+if (densidade1 < densidade2){
+    printf("Carta 1 Venceu!\n");
 }else{
-    printf("Resuntado: Carta 2 venceu!\n");
+    printf("Carta 2 Venceu!\n");
 }
-printf("Carta 1 - Cidade: %s, Codigo: %s, Pib Per Capita: %f\n", nome, cdc, pib2);
-printf("Carta 2 - Cidade: %s, Codigo: %s, Pib Per Capita: %f\n", nome2, cdc2, pib3);
-if (pib2 > pib3){
-    printf("Resultado: Carta 1 venceu!\n");
+printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - PIB PER Capita: %f\n", codigo1, estado1, cidade1, pib2);
+printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - PIB PER Capita: %f\n", codigo2, estado2, cidade2, pib02);
+if (pib01 > pib02){
+    printf("Carta 1 Venceu!\n");
 }else{
-    printf("Resuntado: Carta 2 venceu!\n");
+    printf("Carta 2 Venceu!\n");
+}
+printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Super Poder: %f\n", codigo1, estado1, cidade1, super);
+printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Super Poder: %f\n", codigo2, estado2, cidade2, super2);
+if (super > super2){
+    printf("Carta 1 Venceu!\n");
+}else{
+    printf("Carta 2 Venceu!\n");
 }
 
-  
-
-    return 0;
-}
+return 0;
+}   
