@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
@@ -10,7 +12,8 @@
 //PIB per capita: PIB total dividido pela população.
 
 int main() {
-
+ 
+ int escolha1;   
  unsigned long int  populacao1, pontosT1;
  unsigned long int  populacao2, pontosT2;
  float area1, pib1, densidade1, pib2;
@@ -76,56 +79,77 @@ super = populacao1 + area1 + pontosT1 + pib1;
 super2 = populacao2 + area2 + pontosT2 + pib01;
 
 printf("\n");
-printf("Hora do duelo\n");
+printf("Voce deve escolher os atribudos que serao comparados:\n");
+printf("##Faça sua Escolha##\n");
+printf("");
+printf("1. Populacao\n");
+printf("2. Area\n");
+printf("3. Pontos Turisticos\n");
+printf("4. PIB\n");
+printf("5. Densidade\n");
+scanf("%d", escolha1);
 
+switch (escolha1)
+{
+case 1:
 printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Populacao: %d\n", codigo1, estado1, cidade1, populacao1);
 printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Populacao: %d\n", codigo2, estado2, cidade2, populacao2);
 if(populacao1 > populacao2){
     printf("Carta 1 Venceu!\n");
+}else if (populacao1 == populacao2){
+    printf("#Enpate##");
 }else{
     printf("Carta 2 Venceu!\n");
 }
+    break;
+case 2:
 printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Area: %f\n", codigo1, estado1, cidade1, area1);
 printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Area: %f\n", codigo2, estado2, cidade2, area2);
 if(area1 > area2){
     printf("Carta 1 Venceu!\n");
+}else if (area1 == area2){
+    printf("#Enpate##");
 }else{
     printf("Carta 2 Venceu!\n");
-}
+}  
+   break;
+case 3:
 printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Pontos Turisticos: %d\n", codigo1, estado1, cidade1, pontosT1);
 printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Pontos Turisticos: %d\n", codigo2, estado2, cidade2, pontosT2);
 if(pontosT1 > pontosT2){
     printf("Carta 1 Venceu!\n");
+}else if (pontosT1 == pontosT2){
+    printf("#Enpate##");
 }else{
     printf("Carta 2 Venceu!\n");
 }
+   break;
+case 4:
 printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Pib: %f\n", codigo1, estado1, cidade1, pib1);
 printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - pib: %f\n", codigo2, estado2, cidade2, pib01);
 if(pib1 > pib01){
-    printf("Carta 1 Venceu!\n");      
+    printf("Carta 1 Venceu!\n");
+}else if (pib1 == pib01){
+    printf("#Enpate##");      
 }else{
     printf("Carta 2 Venceu!\n");
 }
+  break;
+case 5:
 printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Densidade: %f\n", codigo1, estado1, cidade1, densidade1);
 printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Densidade: %f\n", codigo2, estado2, cidade2, densidade2);
 if (densidade1 < densidade2){
     printf("Carta 1 Venceu!\n");
+}else if (densidade1 == densidade2){
+    printf("#Enpate##");
 }else{
     printf("Carta 2 Venceu!\n");
 }
-printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - PIB PER Capita: %f\n", codigo1, estado1, cidade1, pib2);
-printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - PIB PER Capita: %f\n", codigo2, estado2, cidade2, pib02);
-if (pib01 > pib02){
-    printf("Carta 1 Venceu!\n");
-}else{
-    printf("Carta 2 Venceu!\n");
-}
-printf("Carta 1 Codigo: %s - Estado: %s - Nome da cidade: %s - Super Poder: %f\n", codigo1, estado1, cidade1, super);
-printf("Carta 2 Codigo: %s - Estado: %s - Nome da cidade: %s - Super Poder: %f\n", codigo2, estado2, cidade2, super2);
-if (super > super2){
-    printf("Carta 1 Venceu!\n");
-}else{
-    printf("Carta 2 Venceu!\n");
+  break;
+
+default:
+   printf("Opção invalida\n");
+    break;
 }
 
 return 0;
